@@ -18,7 +18,7 @@ public class CourseAttendeeTrigger_Test {
     public static void verifyBulkAttendees() {
 
          // Get first Course Delivery Record that is 'Scheduled'
-    Course_Delivery__c courseDelivery = [SELECT Id, Name FROM Course_Delivery__c WHERE Status__c = 'Scheduled' LIMIT 1][0];
+        Course_Delivery__c courseDelivery = [SELECT Id, Name FROM Course_Delivery__c WHERE Status__c = 'Scheduled' LIMIT 1][0];
 
         // Get first Technician Student that is Active
         Id techRecId = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Technician').getRecordTypeId();
